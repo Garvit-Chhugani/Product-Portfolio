@@ -1,0 +1,271 @@
+/* autonmis.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background: #fff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background: url('../images/Autonmis Work.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(29, 53, 87, 0.4);
+}
+
+.hero-container {
+    position: relative;
+    z-index: 3;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 120px;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin-top: 300px;
+    margin-left: -110px;
+}
+
+.timeline {
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #fff;
+
+}
+
+.hero-logo {
+    width: 180px;
+}
+
+.hero-logo img {
+    width: 100%;
+    height: auto;
+    margin-top: 380px;
+    margin-left: 70%;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 120px;
+}
+
+/* Info Section */
+.info-section {
+    margin-bottom: 100px;
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 60px;
+}
+
+.section-headings {
+    position: relative;
+    margin-top: 2.5rem;
+}
+
+.section-headings h2 {
+    font-size: 1.5rem;
+    margin-bottom: 9rem;
+}
+
+.section-headings h2:first-child {
+    margin-top: 0;
+}
+
+.section-content .content-block {
+    margin-bottom: 4rem;
+}
+
+.section-content .content-block:last-child {
+    margin-bottom: 0;
+}
+
+.content-block p {
+    margin-bottom: 1rem;
+}
+
+/* Feature Section */
+.feature-section {
+    margin-bottom: 100px;
+    margin-top: -50px;
+}
+
+.feature-section > h2 {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.feature-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 4rem;
+}
+
+.feature-block {
+    margin-bottom: 2rem;
+}
+
+.feature-block h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature-image img {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: 250px;
+}
+
+.feature-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: -4rem;
+}
+
+/* Solutions Section */
+.solutions .solution-group {
+    margin-bottom: 2rem;
+}
+
+.solution-group h4 {
+    margin-top: 0.5rem;
+}
+
+.solution-group ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+
+}
+
+.solution-group li {
+    margin-bottom: 0.5rem;
+}
+
+/* Approach and Results */
+.approach ol,
+.results ol {
+    list-style-position: inside;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+
+}
+
+.approach li,
+.results li {
+    margin-bottom: 0.5rem;
+}
+
+/* Learning Section */
+.learning-container {
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    gap: 60px;
+}
+
+.learning-divider {
+    background-color: #000;
+    height: 100%;
+}
+
+.learning-left h3,
+.learning-right h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.learning-left p,
+.learning-right p {
+    margin-bottom: 1rem;
+}
+
+/* Fade In Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero-container,
+    .main-content {
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-grid,
+    .feature-container {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .learning-divider {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container,
+    .main-content {
+        padding: 0 30px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-logo {
+        width: 120px;
+    }
+}

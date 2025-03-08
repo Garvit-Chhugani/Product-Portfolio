@@ -1,0 +1,334 @@
+/* yulu.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background: #fff;
+}
+
+.case-study {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 120px 120px;
+}
+
+/* Title Section */
+.title-section {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.title-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #2d3436;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: #2d3436;
+    line-height: 1.8;
+}
+
+.subtitles {
+    font-size: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 25px;
+    color: #2d3436;
+    line-height: 1.8;
+}
+
+/* Challenge Section */
+.challenge-section {
+    margin-bottom: 80px;
+}
+
+.challenge-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #2d3436;
+}
+
+
+
+.challenge-images {
+    display: flex;
+    flex-direction: row; /* Change to row to place images side by side */
+    flex-wrap: wrap; /* Ensures responsiveness */
+    gap: 30px;
+    justify-content: center; /* Centers the images */
+    align-items: flex-start;
+}
+
+
+
+.challenge-image {
+    width: 100%; /* Ensure images take up full width */
+    max-width: 500px; /* Maintain original max width */
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.challenge-images a {
+    display: block;
+    width: 100%;
+    cursor: zoom-in;
+    max-width: 500px;
+    margin: 0 auto;
+    cursor: zoom-in;
+}
+
+.challenge-images a:hover .challenge-image {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.image-container {
+    position: relative;
+    max-width: 500px; /* Ensure images maintain their original size */
+    width: 100%;
+    display: flex; /* Use flexbox to maintain full width */
+    justify-content: center; /* Center image inside container */
+}
+
+.image-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+    background-color: #2d3436;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Solution Section */
+.solution-section {
+    text-align: center;
+    margin-bottom: 100px;
+    padding: 40px; /* Add padding inside the border */
+    /* border: 3px solid #00b2b8; /* Border color */
+    /* border-radius: 12px; /* Rounded edges */
+    /* background: #f8f9fa; /* Light background for contrast */
+    /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 900px; /* Limit width for better appearance */
+    margin: 0 auto 100px; /* Centering */
+}
+
+.solution-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #2d3436;
+}
+
+/* Add a border to the PDF container for more emphasis */
+.pdf-container {
+    max-width: 800px;
+    height: 455px;
+    margin: 0 auto 30px;
+    margin-top:-35px;
+    background: #ffffff;
+    border: 7px solid #131616; /* Border around the PDF */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.pdf-thumbnail {
+    display: block;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.pdf-thumbnail img {
+    width: 100%;
+    height: auto;
+    filter: blur(1px);
+    transition: filter 0.3s ease;
+}
+
+.pdf-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.pdf-thumbnail:hover img {
+    filter: blur(0);
+}
+
+.pdf-thumbnail:hover .pdf-overlay {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.pdf-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #00b894;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.view-pdf-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: transparent; /* Make it an outline button initially */
+    color: #005cb8; /* Text color same as border color */
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    border: 2px solid #005cb8; /* Outline border */
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.view-pdf-btn:hover {
+    background: linear-gradient(135deg, #2800b8, #00cec9); /* Solid background on hover */
+    color: white; /* Change text color to white */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 184, 148, 0.3);
+}
+
+
+/* Key Takeaways Section */
+.takeaways-section {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: -50px;
+
+
+}
+
+.takeaways-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: #2d3436;
+}
+
+.takeaways-list {
+    list-style: none;
+}
+
+.takeaways-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 25px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.takeaways-list li.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.takeaways-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, #00b894, #00cec9);
+    border-radius: 50%;
+}
+
+/* Fancybox Customization */
+.fancybox__backdrop {
+    background: rgba(24, 24, 27, 0.95);
+}
+
+.fancybox__container {
+    --fancybox-bg: rgba(24, 24, 27, 0.95);
+}
+
+.fancybox__content {
+    padding: 0;
+    background: transparent;
+}
+
+/* Fade In Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .case-study {
+        padding: 60px 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .case-study {
+        padding: 40px 20px;
+    }
+
+    .title-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .pdf-container {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-section h1 {
+        font-size: 2rem;
+    }
+
+    .pdf-container {
+        height: 300px;
+    }
+}

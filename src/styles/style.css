@@ -1,0 +1,610 @@
+/* CSS Code */
+
+/* Hero Section Styles */
+
+.hero-section {
+    padding: 6rem 0 2rem;
+    background-color: #e9ecef;
+
+}
+
+.container {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 0 6rem;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+
+.hero-image {
+    position: relative;
+    height: 550px; /* Increased height */
+
+}
+
+.profile-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.hero-text {
+    padding-top: 0; /* Remove top padding */
+    height: 600px; /* Match image height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.greeting {
+    text-align: left;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.greeting-text {
+    display: inline-block; /* Ensure smooth transitions */
+    animation: morph 21s infinite; /* 21 greetings × 1 second each */
+}
+
+.namaste-emoji {
+    font-size: 2.5rem;
+}
+
+/* Keyframes for morphing animation */
+@keyframes morph {
+    0%, 100% {
+        content: "नमस्ते"; /* Hindi */
+    }
+    4.76% {
+        content: "নমস্কার"; /* Bengali */
+    }
+    9.52% {
+        content: "నమస్తే"; /* Telugu */
+    }
+    14.28% {
+        content: "नमस्कार"; /* Marathi */
+    }
+    19.04% {
+        content: "வணக்கம்"; /* Tamil */
+    }
+    23.8% {
+        content: "آداب"; /* Urdu */
+    }
+    28.56% {
+        content: "નમસ્તે"; /* Gujarati */
+    }
+    33.32% {
+        content: "നമസ്കാരം"; /* Malayalam */
+    }
+    38.08% {
+        content: "ನಮಸ್ಕಾರ"; /* Kannada */
+    }
+    42.84% {
+        content: "ନମସ୍କାର"; /* Odia */
+    }
+    47.6% {
+        content: "ਸਤ ਸ੍ਰੀ ਅਕਾਲ"; /* Punjabi */
+    }
+    52.36% {
+        content: "নমস্কাৰ"; /* Assamese */
+    }
+    57.12% {
+        content: "प्रणाम"; /* Maithili */
+    }
+    61.88% {
+        content: "ᱥᱟᱱᱛᱟᱲ"; /* Santali */
+    }
+    66.64% {
+        content: "آداب"; /* Kashmiri */
+    }
+    71.4% {
+        content: "नमस्कार"; /* Konkani */
+    }
+    76.16% {
+        content: "नमस्ते"; /* Dogri */
+    }
+    80.92% {
+        content: "ꯊꯥꯛꯄꯥ"; /* Manipuri */
+    }
+    85.68% {
+        content: "वंदे"; /* Bodo */
+    }
+    90.44% {
+        content: "नमः"; /* Sanskrit */
+    }
+    95.2% {
+        content: "نمستے"; /* Sindhi */
+    }
+}
+
+.intro-text {
+    font-size: 1.75rem;
+    color: var(--navy);
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 100%; /* Prevent text from stretching too wide */
+}
+
+
+.cta-container {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.social-resume {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-section .social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-section .social-link {
+    color: var(—-navy); 
+	font-size: 2rem; 
+	transition: color 0.3s ease;  
+    opacity: 1;
+    display: inline-block;
+}
+
+.hero-section .social-link:hover {
+    color: var(--orange);
+}
+
+.hero-section .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--orange);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    min-width: 240px; /* Ensures the button has a minimum width */
+    justify-content: center; /* Keeps text centered */
+}
+
+.hero-section .cta-button:hover {
+    /* background-color: var(--red); */
+    transform: translateY(-2px);
+}
+
+.cta-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack CTA and separator */
+    align-items: center; /* Center everything */
+    gap: 1rem; /* Adds spacing between the button and separator */
+}
+
+.separator {
+    height: 1px;
+    background-color: black;
+    opacity: 1;
+    width: 220px; /* Match the CTA button's width */
+    margin: 1rem auto; /* Center horizontally */
+    display: block; /* Ensures proper block behavior */
+}
+
+.experience-section {
+    margin-bottom: 2rem; /* Push to bottom */
+
+}
+
+.experience-section h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--navy);
+    margin-bottom: 2rem;
+    font-size: 1.5rem; /* Add specific size */
+}
+
+.experience-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.1rem; /* Add specific size */
+    margin-bottom: 2rem;
+}
+
+.experience-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--navy);
+    transition: all 0.3s ease;
+}
+
+.experience-item .company {
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.experience-item .arrow {
+    color: var(--orange);
+}
+
+.experience-item:hover {
+    color: var(--orange);
+}
+
+.key-industries {
+    margin-top: 1.5rem;
+    color: var(--navy);
+    font-size: 1rem;
+    max-width: 90%; /* Prevent text from stretching too wide */
+
+}
+
+/* About Section Styles */
+.about-section {
+    padding: 4rem 0;
+    background-color: white;
+    position: relative; /* Ensures image stays within this section */
+    overflow: hidden; /* Prevents any overflow issues */
+
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 6rem;
+    align-items: start;
+}
+
+.about-text h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    color: var(--navy);
+    margin-bottom: 2rem;
+    margin-top: -2rem;
+}
+
+.about-paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.about-paragraphs p {
+    color: var(--navy);
+    line-height: 1.8;
+}
+
+.highlight {
+    background: linear-gradient(120deg, #FFEB3B 0%, #FFEB3B 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.4em;
+    background-position: 0 88%;
+    padding: 0 4px;
+    border-radius: 2px;
+    transition: background-size 0.25s ease-in;
+}
+
+.highlight:hover {
+    background-size: 100% 100%;
+}
+
+.connect-prompt {
+    font-weight: 500;
+    color: var(--navy);
+    margin-top: 1rem;
+}
+
+.connect-button {
+    margin-top: 1rem;
+    display: inline-flex;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+
+}
+
+.about-image {
+    position: absolute; /* Covers the entire right side */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40%; /* Adjust width as needed */
+    height: 100%;
+
+}
+
+.about-img {
+    width: 100%;
+    height: 100%; /* Ensure it fills container */
+    object-fit: cover; /* Makes sure image covers without distortion */
+    border-radius: 0px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .hero-content, .about-content {
+        gap: 2rem;
+    }
+    
+    .intro-text {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content, .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-image, .about-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .hero-text {
+        padding-top: 0;
+    }
+
+    .greeting {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    }
+    
+    .social-resume {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 4rem 0 2rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .experience-item {
+        flex-wrap: wrap;
+    }
+    
+    .experience-item .duration {
+        margin-left: 2rem;
+    }
+}
+
+
+
+
+
+/* Common Styles */
+
+
+/* Section Styles */
+section {
+    padding: 10rem 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4rem;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 4rem;
+    text-align: left;
+}
+
+.section-divider {
+    height: 1px;
+    background-color: rgba(0, 48, 73, 0.1);
+    margin: 0;
+    width: 100%;
+    max-width: 1400px;
+    display: block;
+}
+
+/* Cards Container */
+.cards-container {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+
+.work-cards {
+    grid-template-columns: repeat(3, 1fr);
+}
+.case-studies-cards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem; /* Reduced from 2rem to maintain alignment */
+}
+
+.case-studies-cards .card {
+    padding: 1.5rem; /* Slightly reduced padding */
+}
+
+.enhancements-cards {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.teardowns-cards {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Card Styles */
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.company-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: var(--navy);
+    margin: 0;
+    display: none;
+}
+
+.logo-container {
+    width: 250px;
+    height: 125px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-logo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.company-logo:hover {
+    transform: scale(1.05);
+}
+
+.teardown-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: var(--navy);
+    margin: 0;
+    display: none;
+}
+
+.description {
+    color: var(--navy);
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: transparent; /* Remove solid background */
+    color: var(--orange); /* Text color same as border */
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--orange); /* Add border */
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--orange); /* Fill background on hover */
+    color: white; /* Change text color on hover */
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .teardowns-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 4rem 0;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .teardowns-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .logo-container {
+        width: 150px;
+        height: 75px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+}
+
+.card {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+.work-section {
+    background-color: var(--cream);
+    padding: 6rem 0;
+    width: 100%;
+}
+
+.case-studies-section {
+    background-color: white;
+    padding: 6rem 0;
+    width: 100%;
+}
+
+.enhancements-section {
+    background-color: var(--cream);
+    padding: 6rem 0;
+    width: 100%;
+}
+
+.teardowns-section {
+    background-color: white;
+    padding: 6rem 0;
+    width: 100%;
+}
+

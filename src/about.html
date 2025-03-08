@@ -1,0 +1,163 @@
+
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About + Connect — Garvit Chhugani</title>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/about.css">
+    <!-- Fancybox for image lightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="case-study">
+        <!-- Title Section -->
+        <section class="title-section fade-in">
+            <h1>About Garvit</h1>
+            <h2>Data-Driven, User-Centric, Problem Solver</h2>
+            <h3>Bio</h3>
+            
+            <div class="subtitle">
+            
+                <p>My professional journey began with an inspiring discovery—India’s thriving startup ecosystem through Startup India, which ignited my enthusiasm for working with early and mid-stage startups. This curiosity shaped my career aspiration to contribute meaningfully to impactful products.</p>
+                
+                <p>After graduating, I embarked on a career in <span class="highlight">Product Growth Development,</span> where I cultivated a passion for user experience, design, technology, analytics, and growth strategies. It was during this time that I found my calling in Product Management.</p>
+                
+                <p>In pursuit of further growth, I took a brief <u><i>career break to prepare for MBA exams,</i></u> aspiring to join a top-tier business school. Although the journey didn’t pan out as planned, it became a turning point. Instead of settling for less, I pivoted toward my plan B: doubling down on my passion for Product Management. During this period, I enrolled in specialized PM courses, attended industry events, and connected with professionals to enhance my skills and broaden my perspective.</p>
+                
+                <p>Shortly after, I secured an Associate Product Manager role at a B2B SaaS startup, which was a milestone in my professional journey. Alongside this, I completed the <span class="highlight">NextLeap Product Manager Fellowship,</span> an enriching experience that provided practical insights into PM fundamentals taught by industry experts.</p>
+                
+                <p>I later had the opportunity to work as a freelance and founding Product Manager at a stealth startup, where I <b>navigated unique challenges and applied my skills to create value.</b> These experiences reinforced my passion for tackling interesting problems that have the potential for widespread impact. To put it simply, my goal as a Product Manager is to help people work smarter, not harder.</p>
+                
+                <p>When I’m not immersed in tech and product challenges, you can find me indulging in my diverse interests—reading <i>(fantasy fiction and self-help),</i> staying active through yoga and gym sessions, traveling, or experimenting in the kitchen.</p>
+            
+            </div>
+            <div class="subtitles">
+                <h4>Noteworthy Skills</h4>
+                <p>I’m a Product Manager who thrives at the intersection of creativity and strategy. From crafting <span class="highlight">Product Roadmaps</span> that inspire teams to writing <span class="highlight">crystal-clear PRDs</span> that align stakeholders, I’ve honed the art of <i><u>turning ideas into actionable outcomes.</u></i> My expertise spans <b>User Research, Feature Prioritization,</b> and leveraging <span class="highlight">Agile/Scrum methodologies</span> to deliver exceptional products. Whether it’s defining <span class="highlight">Go-To-Market Strategies,</span> conducting <b>A/B Testing,</b> or diving deep into <b>Metrics Analysis,</b> I’m driven by a passion for continuous improvement and data-backed decision-making.</p>
+                <p>Equipped with tools and technologies, including <b>JIRA, Figma, Whimsical, and Google Docs/Sheets,</b> I can turn complex ideas into wireframes and workflows that <i><u>engineers and designers love.</u></i> I have a solid foundation in <span class="highlight">SQL, Data Analysis,</span> APIs, HTML, CSS, and JavaScript, enabling me to back decisions with numbers while easily navigating SaaS environments.</p>
+                <p>But what sets me apart is my ability to collaborate across teams—whether it’s aligning diverse stakeholders, leading cross-functional teams, or simply navigating the occasional meeting chaos with grace. With strong <b>Problem-Solving, Adaptability, and Market Research</b> skills, I ensure that every product meets the sweet spot of user needs, market demands, and business goals.</p>
+                <p>Let’s just say I’m here to connect the dots, solve the puzzles, and deliver results—one roadmap at a time.</p>
+            </div>
+
+        </section>
+
+        <!-- Let's Connect Section -->
+<section class="challenge-section fade-in">
+            <h2>Let's Connect</h2>
+            <div class="two-social-links">
+                <a href="https://www.linkedin.com/in/garvitchhugani/" class="two-social-link" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+               
+                <a href="mailto:garvit.chhugani17@gmail.com" class="two-social-link">
+                    <i class="far fa-envelope"></i>
+                </a>
+            </div>
+            <div class="connect">
+                
+                <p>If you’ve read this far, I truly appreciate your time—it’s refreshing to connect with those who still enjoy thoughtful content in an era of videos and short reels.</p>
+                <p>Feel free to reach out if you’d like to discuss work opportunities, brainstorm side projects, or simply connect. I’m always open to new conversations. Cheers!</p>
+            
+            </div>
+
+            <!-- CONTACT ME Button -->
+        <button id="openModalBtn" class="contact-btn">CONTACT ME</button>
+    </div>
+
+    <!-- POP-UP MODAL -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="contact-form-container">
+                <!-- Waiting Message -->
+                <div id="waitMessage" class="wait-message" style="display: none;">
+                    Please wait a minute before submitting again.
+                </div>
+
+                <!-- Contact Form -->
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <span class="error-message"></span>
+                    </div>
+
+                    <button type="submit" id="submitBtn" disabled>
+                        <span class="button-text">Submit</span>
+                        <span class="button-loader"></span>
+                    </button>
+                </form>
+
+                <!-- Success Message -->
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <p><strong>Message Sent!</strong></p>
+                    <p>Thanks for reaching out! I'll be sure to look over your message.</p>
+                    <p>Best,<br>Garvit</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Engagement Section -->
+<section class="engagement-section">
+            <div class="engagement-header">
+                <h2>Loved my portfolio? Drop a ❤️ & make my day! 🚀</h2>
+                <div class="interaction-buttons">
+                    <div class="heart-container">
+                        <button class="heart-button" id="heartBtn" aria-label="Like">
+                            <i class="far fa-heart"></i>
+                            <span class="heart-count" id="heartCount">0</span>
+                        </button>
+                        <div class="tooltip" id="heartTooltip">Thanks for appreciating my work!</div>
+                    </div>
+                    <div class="share-container">
+                        <button class="share-button" id="shareBtn" aria-label="Share">
+                            <i class="fas fa-link"></i>
+                        </button>
+                        <div class="tooltip" id="shareTooltip">Link copied!</div>
+                    </div>
+                </div>
+            </div>
+</section>
+
+
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="scripts/global.js"></script>
+    <script src="scripts/about.js" defer></script>
+
+
+</body>
+</html>

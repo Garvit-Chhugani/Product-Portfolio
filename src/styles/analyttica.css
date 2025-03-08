@@ -1,0 +1,295 @@
+/* leaps.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background: #fff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background: url('../images/Analyttica\ Work.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(29, 53, 87, 0.4);
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 120px;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin-top: 300px;
+    margin-left: -110px;
+}
+
+.timeline {
+    display: block;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.hero-logo {
+    width: 180px;
+}
+
+.hero-logo img {
+    width: 135%;
+    height: auto;
+    margin-top: 410px;
+    margin-left: 40%;
+}
+
+/* Main Content */
+.main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 120px;
+}
+
+/* Info Section */
+.info-section {
+    margin-bottom: 100px;
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 60px;
+}
+
+.section-headings {
+    position: relative;
+    margin-top: 0.9rem;
+}
+
+.section-headings h2 {
+    font-size: 1.5rem;
+    margin-bottom: 3.5rem;
+    margin-top: 8.3rem;
+}
+
+.section-headings h2:first-child {
+    margin-top: 0rem;
+}
+
+.section-content .content-block {
+    margin-bottom: 5rem;
+}
+
+.section-content .content-block:last-child {
+    margin-bottom: 0;
+}
+
+.content-block p {
+    margin-bottom: 2rem;
+}
+
+/* Features Navigation */
+.features-nav {
+    margin-bottom: 60px;
+}
+
+.features-nav h2 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.features-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.feature-link {
+    color: #000;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.feature-link:hover {
+    color: #156fed;
+}
+
+.feature-divider {
+    color: #ccc;
+    font-weight: 300;
+}
+
+/* Project Sections */
+.project-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+    padding: 40px 0;
+}
+
+.project-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #1d3557;
+}
+
+.project-content p {
+    margin-bottom: 2rem;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.section-divider {
+    height: 2px;
+    background-color: #0a0a0a;
+    margin: 60px 0;
+}
+
+/* Learning Section */
+.learning-section {
+    margin-top: 100px;
+}
+
+.learning-container {
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    gap: 60px;
+}
+
+.learning-divider {
+    background-color: #000;
+    height: 100%;
+}
+
+.learning-left h3,
+.learning-right h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.learning-left p,
+.learning-right p {
+    margin-bottom: 1rem;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.6s ease-out;
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 0.6s ease-out;
+}
+
+.fade-in.visible,
+.slide-in-left.visible,
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero-container,
+    .main-content {
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 992px) {
+    .section-grid,
+    .project-section {
+        grid-template-columns: 1fr;
+    }
+
+    .learning-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .learning-divider {
+        display: none;
+    }
+
+    .features-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .feature-divider {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container,
+    .main-content {
+        padding: 0 30px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-logo {
+        width: 120px;
+    }
+}
