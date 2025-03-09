@@ -1,12 +1,12 @@
 // global.js
 document.addEventListener('DOMContentLoaded', async function() {
     // Load header
-    const headerResponse = await fetch('/src/components/header.html');
+    const headerResponse = await fetch('/components/header.html');
     const headerText = await headerResponse.text();
     document.body.insertAdjacentHTML('afterbegin', headerText);
 
     // Load footer
-    const footerResponse = await fetch('/src/components/footer.html');
+    const footerResponse = await fetch('components/footer.html');
     const footerText = await footerResponse.text();
     document.body.insertAdjacentHTML('beforeend', footerText);
 
